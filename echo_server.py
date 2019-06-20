@@ -18,7 +18,7 @@ def server(log_buffer=sys.stderr):
     #       socket library documentation:
     #       http://docs.python.org/3/library/socket.html#example
     sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-    sock.settimeout(10)
+#    sock.settimeout(10)
     
     # log that we are building a server
     print("making a server on {0}:{1}".format(*address), file=log_buffer)
@@ -85,6 +85,7 @@ def server(log_buffer=sys.stderr):
                 print(
                     'echo complete, client connection closed', file=log_buffer
                 )
+        
 
     except KeyboardInterrupt:
         # TODO: Use the python KeyboardInterrupt exception as a signal to

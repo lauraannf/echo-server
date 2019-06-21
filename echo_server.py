@@ -85,7 +85,7 @@ def server(log_buffer=sys.stderr):
                 print(
                     'echo complete, client connection closed', file=log_buffer
                 )
-        
+                break
 
     except KeyboardInterrupt:
         # TODO: Use the python KeyboardInterrupt exception as a signal to
